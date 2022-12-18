@@ -7,7 +7,7 @@ app = FastAPI()
 
 
 class singleCountry(BaseModel):
-    Country:Optional[str]
+    Country:str
     ThreeLetterSymbol:Optional[str]
     Infection_Risk:Optional[float]
     TotalCases:Optional[int]
