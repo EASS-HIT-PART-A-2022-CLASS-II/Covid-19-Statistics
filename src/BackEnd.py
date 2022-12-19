@@ -87,5 +87,5 @@ def specicif_country1(Country):
     return (response_data)
 
 if __name__ == "__BackEnd__":
-    uvicorn.run("BackEnd:app", port=8000, reload=True)
+    uvicorn.run("BackEnd:app", port=8080, reload=True)
     
