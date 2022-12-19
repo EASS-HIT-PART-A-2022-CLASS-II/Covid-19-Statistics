@@ -1,7 +1,8 @@
 FROM python:3.10.6
 
+WORKDIR /app/src
 WORKDIR /app
-WORKDIR /src
+
 COPY . /app/src
 COPY ./requirements.txt /app
 
