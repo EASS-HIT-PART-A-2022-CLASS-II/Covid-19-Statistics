@@ -32,7 +32,7 @@ docker compose up
 ```
 4. Great! the backend is running! now open your browser and type:
 ```bash
-http://localhost:8000/
+http://localhost:8000/docs
 ```  
 
 ## Contact
