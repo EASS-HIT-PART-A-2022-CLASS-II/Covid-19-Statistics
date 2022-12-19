@@ -5,7 +5,7 @@ services:
       context: ./src
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "8000:8000"
     container_name: Covid19-statistics
     networks:
       - Covid19-statistics
