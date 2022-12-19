@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: Covid19-statistics
+    networks:
+      - Covid19-statistics
+
+networks:
+  Covid19-statistics:
+    driver: bridge
