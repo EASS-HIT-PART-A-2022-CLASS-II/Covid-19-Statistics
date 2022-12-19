@@ -5,6 +5,16 @@ world wide statistics about Covid-19 in a different way.
 
 the project contains 3 microservices - Front-end, Back-end, TBD.
 
+## features ##
+
+✔ statistics about Covid-19 on each country
+
+✔ statistics about Covid-19 on each land (TBD)
+
+✔ statistics about Covid-19 world wide
+
+✔ piecharms (TBD)
+
 ## Pre-requisites ##
 
 python 3.10
