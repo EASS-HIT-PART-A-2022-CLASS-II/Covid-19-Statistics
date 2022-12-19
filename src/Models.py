@@ -21,4 +21,8 @@ class singleCountry(BaseModel):
     class Config:
         orm_mode=True
     
+class AllWorld(BaseModel):
+    TotalDeath:Optional[int]
     
+    class config:
+        orm_mode=True
