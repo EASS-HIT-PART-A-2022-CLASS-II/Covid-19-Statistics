@@ -61,4 +61,4 @@ if view_pie_chart:
     cases = [country['TotalCases'] for country in countries]
     plt.pie(cases, labels=labels)
     st.set_option('deprecation.showPyplotGlobalUse', False)
-    st.pyplot()
+    st.pyplot() 
