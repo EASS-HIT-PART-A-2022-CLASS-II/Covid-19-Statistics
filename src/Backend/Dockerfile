@@ -1,11 +1,10 @@
 FROM python:3.10.6
 
-WORKDIR /app/src
+WORKDIR /app/src/BackEnd
 WORKDIR /app
 
-COPY . /app/src
+COPY . /app/src/BackEnd
 COPY ./requirements.txt /app
-
 
 
 RUN pip3 install -r requirements.txt
