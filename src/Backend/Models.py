@@ -16,6 +16,7 @@ class singleCountry(BaseModel):
     TotalTests:Optional[str]
     Population:Optional[str]
     ActiveCases:Optional[int]
+    Serious_Critical:Optional[int]
     Message:Optional[str]
     class Config:
         orm_mode=True

@@ -71,6 +71,7 @@ def specicif_country(country):
             singleCountry.TotalCases=i['TotalCases'] # value i want to show
             singleCountry.TotalDeaths=i['TotalDeaths'] # value i want to show
             singleCountry.TotalRecovered=i['TotalRecovered'] # value i want to show
+            singleCountry.Serious_Critical=i['Serious_Critical']
             singleCountry.TotalTests=i['TotalTests'] # value i want to show
             singleCountry.Population=i['Population'] # value i want to show
             singleCountry.ActiveCases=i['ActiveCases'] # value i want to show
