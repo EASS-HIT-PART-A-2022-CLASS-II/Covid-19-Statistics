@@ -48,7 +48,7 @@ def specicif_country(country):
 
     headers = {
         "X-RapidAPI-Key": API_KEY, 
-        "X-RapidAPI-Host": API_HOST"
+        "X-RapidAPI-Host": API_HOST
     }
 
     response = requests.request("GET", url, headers=headers)
