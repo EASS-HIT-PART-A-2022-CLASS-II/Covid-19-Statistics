@@ -15,8 +15,8 @@ def World_Data():
     url = "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/world"
 
     headers = {
-        "X-RapidAPI-Key": API_KEY,
-        "X-RapidAPI-Host": API_HOST
+        "X-RapidAPI-Key": "a463c18a92msha3eb294601ac463p198518jsna8e685091d4c",
+        "X-RapidAPI-Host": "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com"
     }
 
     response = requests.request("GET", url, headers=headers)
@@ -30,8 +30,8 @@ def index2():
     url = "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/countries"
 
     headers = {
-        "X-RapidAPI-Key": API_KEY,
-        "X-RapidAPI-Host":API_HOST
+        "X-RapidAPI-Key": "a463c18a92msha3eb294601ac463p198518jsna8e685091d4c",
+        "X-RapidAPI-Host":"vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com"
     }
 
     response = requests.request("GET", url, headers=headers)
@@ -47,8 +47,8 @@ def specicif_country(country):
     url = "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/countries"
 
     headers = {
-        "X-RapidAPI-Key": API_KEY, 
-        "X-RapidAPI-Host": API_HOST
+        "X-RapidAPI-Key": "a463c18a92msha3eb294601ac463p198518jsna8e685091d4c", 
+        "X-RapidAPI-Host": "vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com"
     }
 
     response = requests.request("GET", url, headers=headers)
