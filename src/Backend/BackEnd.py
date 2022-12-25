@@ -40,7 +40,6 @@ def index2():
     return (response_data)
 
 
-
 @app.get("/get_specific_country_covid_data/{country}",response_model=singleCountry,response_model_exclude_unset=True) #  specific country covid data
 def specicif_country(country:str):
 
@@ -63,7 +62,6 @@ def specicif_country(country:str):
         singleCountry.TotalRecovered = 0
         singleCountry.TotalTests = 0
         singleCountry.Population = 0
-        singleCountry.Serious_Critical=0
         if i['Country'] == country:  # search by country - user input
             singleCountry.Country=i['Country'] # value i want to show
             singleCountry.ThreeLetterSymbol=i['ThreeLetterSymbol'] # value i want to show
@@ -73,10 +71,8 @@ def specicif_country(country:str):
             singleCountry.TotalRecovered=i['TotalRecovered'] # value i want to show
             singleCountry.TotalTests=i['TotalTests'] # value i want to show
             singleCountry.Population=i['Population'] # value i want to show
-            singleCountry.Serious_Critical=i['Serious_Critical']
             singleCountry.Message="OK"
             return singleCountry
-    
     singleCountry.Message='Country not found' # if not found
     return singleCountry
 
