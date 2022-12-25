@@ -12,11 +12,10 @@ class singleCountry(BaseModel):
     Infection_Risk:Optional[float]
     TotalCases:Optional[int]
     TotalDeaths:Optional[int]
-    TotalRecovered:Optional[str]
+    TotalRecovered:Optional[int]
     TotalTests:Optional[int]
     Population:Optional[int]
-    # ActiveCases:Optional[int]
-    # SeriousCritical:Optional[int]
+    Serious_Critical:Optional[int]
     Message:Optional[str]
     class Config:
         orm_mode=True
