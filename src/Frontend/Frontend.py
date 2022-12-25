@@ -56,6 +56,7 @@ if view_world_data:
     st.pyplot() 
     
 # If the user wants to view data for a specific country, display a dropdown menu to select the country
+
 if view_country_data:
     st.title("Country data")
     countries = get_countries_data()
@@ -74,7 +75,7 @@ if view_country_data:
 if view_pie_chart:
     st.title("Pie chart of different countries with 5M cases and above!")
     countries = get_countries_data()
-    # Filter the countries list to only include countries with more than 1,000,000 cases
+    # Filter the countries list to only include countries with more than 5,000,000 cases
     countries_filtered = [country for country in countries if country['TotalCases'] > 5000000]
     labels = [country['Country'] for country in countries_filtered]
     cases = [country['TotalCases'] for country in countries_filtered]

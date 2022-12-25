@@ -20,7 +20,7 @@ def World_Data():
     }
 
     response = requests.request("GET", url, headers=headers)
-
+    
     response_data= response.json()
     return (response_data)
 
@@ -41,8 +41,8 @@ def index2():
 
 
 
-@app.get("/get_specific_country_covid_data/{country}",response_model=singleCountry,response_model_exclude_unset=True) #  specific country covid data
-def specicif_country(country):
+@app.get("/get_specific_country_covid_data/{Country}",response_model=singleCountry,response_model_exclude_unset=True) #  specific country covid data
+def specicif_country(Country):
 
     url = "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/countries"
 
@@ -61,23 +61,22 @@ def specicif_country(country):
         singleCountry.TotalCases = 0
         singleCountry.TotalDeaths = 0
         singleCountry.TotalRecovered = ""
-        singleCountry.TotalTests = ""
-        singleCountry.Population = ""
-        singleCountry.ActiveCases = 0
-        if i['Country'] == country:  # search by country - user input
+        singleCountry.TotalTests = 0
+        singleCountry.Population = 0
+        # singleCountry.ActiveCases = 0
+        if i['Country'] == Country:  # search by country - user input
             singleCountry.Country=i['Country'] # value i want to show
             singleCountry.ThreeLetterSymbol=i['ThreeLetterSymbol'] # value i want to show
             singleCountry.Infection_Risk=i['Infection_Risk'] # value i want to show
             singleCountry.TotalCases=i['TotalCases'] # value i want to show
             singleCountry.TotalDeaths=i['TotalDeaths'] # value i want to show
             singleCountry.TotalRecovered=i['TotalRecovered'] # value i want to show
-            singleCountry.Serious_Critical=i['Serious_Critical']
             singleCountry.TotalTests=i['TotalTests'] # value i want to show
             singleCountry.Population=i['Population'] # value i want to show
-            singleCountry.ActiveCases=i['ActiveCases'] # value i want to show
+            # singleCountry.ActiveCases=i['ActiveCases'] # value i want to show
             singleCountry.Message="OK"
             return singleCountry
-        
+    
     singleCountry.Message='Country not found' # if not found
     return singleCountry
 
