@@ -10,6 +10,16 @@ services:
     networks:
       - Covid19-statistics
 
+  frontend:
+    build:
+      context: ./src/Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    container_name: Covid19-statistics-frontend
+    networks:
+      - Covid19-statistics
+
 networks:
   Covid19-statistics:
     driver: bridge
