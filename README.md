@@ -28,7 +28,7 @@ git
 1. Open CMD or terminal inside a desired folder and run the following command:
 
 ``` bash
-https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Covid-19-Statistics.git
+git clone https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Covid-19-Statistics.git
 ```
 
 2. Then nevigate to Covid-19-Statistics folder:
