@@ -9,17 +9,17 @@ option = st.sidebar.selectbox("Select an option", ["Single Country View", "World
 if option == "Single Country View":
   # Call the /get_specific_country_covid_data endpoint and pass the user-specified country name as a parameter
   country = st.sidebar.text_input("Enter a country name")
-  response = requests.get(f"http://localhost:8000/get_specific_country_covid_data/{country}")
+  response = requests.get(f"http://backend:8000/get_specific_country_covid_data/{country}")
   data = response.json()
 
 elif option == "World Wide":
   # Call the /get_all_world_covid_data endpoint
-  response = requests.get("http://localhost:8000/get_all_world_covid_data")
+  response = requests.get("http://backend:8000/get_all_world_covid_data")
   data = response.json()
 
 elif option == "All Countries Charts":
   # Call the /get_all_countries_covid_data endpoint
-  response = requests.get("http://localhost:8000/get_all_countries_covid_data")
+  response = requests.get("http://backend:8000/get_all_countries_covid_data")
   data = response.json()
 
 if option == "Single Country View":

@@ -1,14 +1,12 @@
-FROM python:3.8
+FROM python:3.10
 
-# Install the required packages
-COPY ./requirements.txt /app    
+WORKDIR /app/src/Frontend
+
+COPY . /app/src/Frontend
+
+RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Copy the frontend code to the container
-COPY . .
+EXPOSE 8501
 
-# Expose port 8001
-EXPOSE 8001
-
-# Run the frontend
-CMD ["streamlit", "run", "app.py", "--server.port", "8001"]
+CMD streamlit run Frontend.py
