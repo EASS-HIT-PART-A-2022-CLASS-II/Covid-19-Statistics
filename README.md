@@ -38,10 +38,21 @@ cd Covid-19-Statistics
 ```bash
 docker compose up
 ```
+
 4. Great! the project is running! now open your browser and type:
 ```bash
 http://localhost:8501
 ```  
+
+![image](https://user-images.githubusercontent.com/62401198/213872264-8d7c4cb3-efdb-45f5-9f69-772bd80f47cb.png)
+
+Note: now you can check the backend also 
+```bash
+http://localhost:8000/docs
+``` 
+
+![image](https://user-images.githubusercontent.com/62401198/213872243-98f10fac-0162-4d43-809c-790a224de707.png)
+
 
 ## Contact
 Sahar Raz
