@@ -40,7 +40,7 @@ docker compose up
 ```
 4. Great! the project is running! now open your browser and type:
 ```bash
-http://localhost:8501/docs
+http://localhost:8501
 ```  
 
 ## Contact
