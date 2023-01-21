@@ -44,7 +44,8 @@ docker compose up
 http://localhost:8501
 ```  
 
-![image](https://user-images.githubusercontent.com/62401198/213872264-8d7c4cb3-efdb-45f5-9f69-772bd80f47cb.png)
+![image](https://user-images.githubusercontent.com/62401198/213880026-3bd00da0-1403-4798-bdba-abdb788a4e0f.png)
+
 
 Note: now you can check the backend also 
 ```bash
