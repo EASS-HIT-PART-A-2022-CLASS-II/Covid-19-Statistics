@@ -4,11 +4,31 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
 st.sidebar.title("Options")
+
+st.markdown(
+  """
+  <style>
+      .block-container.css-12oz5g7.egzxvld2 {
+            background-image: url('https://blogs.bmj.com/covid-19/files/2020/05/Covid-Virus.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top left;
+            opacity: 0.5;
+        }
+      .css-1offfwp.e16nr0p34{
+            color: black;
+            background-color: white;
+      }
+  </style>
+  """
+,unsafe_allow_html=True)
 option = st.sidebar.selectbox("Select an option", ["Single Country View", "World Wide", "All Countries Charts"])
 
 if option == "Single Country View":
   # Call the /get_specific_country_covid_data endpoint and pass the user-specified country name as a parameter
   country = st.sidebar.text_input("Enter a country name")
+  if country == "":
+    country = "USA"
   response = requests.get(f"http://backend:8000/get_specific_country_covid_data/{country}")
   data = response.json()
 
