@@ -9,8 +9,6 @@ the project contains 3 microservices - Front-end, Back-end, TBD.
 
 ✔ statistics about Covid-19 on each country
 
-✔ statistics about Covid-19 on each land (TBD)
-
 ✔ statistics about Covid-19 world wide
 
 ✔ piecharms (TBD)
@@ -23,12 +21,12 @@ docker
 
 git
 
-## in order to run the backend - temporary ##
+## in order to run the project ##
 
 1. Open CMD or terminal inside a desired folder and run the following command:
 
 ``` bash
-https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Covid-19-Statistics.git
+git clone https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Covid-19-Statistics.git
 ```
 
 2. Then nevigate to Covid-19-Statistics folder:
@@ -40,10 +38,21 @@ cd Covid-19-Statistics
 ```bash
 docker compose up
 ```
-4. Great! the backend is running! now open your browser and type:
+
+4. Great! the project is running! now open your browser and type:
+```bash
+http://localhost:8501
+```  
+
+![image](https://user-images.githubusercontent.com/62401198/213872264-8d7c4cb3-efdb-45f5-9f69-772bd80f47cb.png)
+
+Note: now you can check the backend also 
 ```bash
 http://localhost:8000/docs
-```  
+``` 
+
+![image](https://user-images.githubusercontent.com/62401198/213872243-98f10fac-0162-4d43-809c-790a224de707.png)
+
 
 ## Contact
 Sahar Raz
