@@ -15,11 +15,11 @@ st.markdown(
   """
   <style>
   
-      .stApp css-fg4pbf.eczokvf1 {
+      .stApp.css-fg4pbf.eczokvf1 {
             background-color: #FAEBD7;
             color: black;
       }
-      .block-container.main.css-k1vhr4.egzxvld3 {
+      .block-container.css-12oz5g7.egzxvld2 {
             background-image: url('https://azrielifoundation.org/he/wp-content/uploads/2020/06/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -104,7 +104,8 @@ if option == "World Wide" or option == "All Countries Charts":
   # Create the table data with specific information
   table_data = [{'Country': country, 'Total Cases': total_cases, 'Total Deaths': total_deaths, 'Total Recovered': total_recovered} for country, total_cases, total_deaths, total_recovered in zip(countries, total_cases, total_deaths, total_recovered)]
   
-  # Display the table
-  st.table(table_data)
+
   
   st.plotly_chart(fig)
+  # Display the table
+  st.table(table_data)
