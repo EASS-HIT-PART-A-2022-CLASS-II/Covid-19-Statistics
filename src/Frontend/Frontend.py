@@ -2,6 +2,12 @@ import streamlit as st
 import requests
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
+import pymongo
+
+client = pymongo.MongoClient("mongodb+srv://sahar:sahar@covid19.ahht6gg.mongodb.net/Covid19")
+
+db = client["Covid19_database"]
+collection = db["Covid19_collection"]
 
 st.sidebar.title("Options")
 
@@ -63,7 +69,11 @@ if option == "Single Country View":
 
   fig.update_layout(barmode='group')
   st.plotly_chart(fig)
-
+  results = collection.find({"country":data['Country']})
+  img = ""
+  for result in results:
+    img = result["country_image"]
+  st.image(img , width=200)
 
 if option == "World Wide" or option == "All Countries Charts":
   countries = [d['Country'] for d in data]
