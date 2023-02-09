@@ -18,9 +18,3 @@ class singleCountry(BaseModel):
     Message:Optional[str]
     class Config:
         orm_mode=True
-    
-class AllWorld(BaseModel):
-    TotalDeath:Optional[int]
-    
-    class config:
-        orm_mode=True

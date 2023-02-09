@@ -25,6 +25,10 @@ st.markdown(
             color: black;
             background-color: white;
       }
+      .st-be.st-bf.st-by.st-bz.st-c0.st-b3.st-c1.st-c2.st-bg.st-c3.st-c4.st-c5.st-c6 {
+            background-color: #FAEBD7;
+            color: black;
+      }
   </style>
   """
 ,unsafe_allow_html=True)
@@ -87,7 +91,7 @@ if option == "World Wide" or option == "All Countries Charts":
   fig.add_trace(go.Bar(x=countries, y=total_recovered, name="Total Recovered"), row=1, col=3)
   fig.update_layout(barmode='group')
   
-  # Create the table data
+  # Create the table data with specific information
   table_data = [{'Country': country, 'Total Cases': total_cases, 'Total Deaths': total_deaths, 'Total Recovered': total_recovered} for country, total_cases, total_deaths, total_recovered in zip(countries, total_cases, total_deaths, total_recovered)]
   
   
