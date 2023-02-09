@@ -9,19 +9,24 @@ client = pymongo.MongoClient("mongodb+srv://sahar:sahar@covid19.ahht6gg.mongodb.
 db = client["Covid19_database"]
 collection = db["Covid19_collection"]
 
-st.sidebar.title("Options")
+st.sidebar.title("Select Option")
 
 st.markdown(
   """
   <style>
-      .block-container.main css-k1vhr4.egzxvld3 {
+  
+      .stApp css-fg4pbf.eczokvf1 {
+            background-color: #FAEBD7;
+            color: black;
+      }
+      .block-container.main.css-k1vhr4.egzxvld3 {
             background-image: url('https://azrielifoundation.org/he/wp-content/uploads/2020/06/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top left;
             opacity: 0.5;
         }
-      .css-1offfwp.e16nr0p34{
+      .css-1offfwp.e16nr0p34 {
             color: black;
             background-color: #FAEBD7;
             opacity: 1.0;
@@ -30,14 +35,14 @@ st.markdown(
             background-color: #FAEBD7;
             color: black;
       }
-      css-6qob1r.e1fqkh3o3 {
+      css-163ttbj.e1fqkh3o11 {
             background-color: #F0F8FF;
             color: black;
       }
   </style>
   """
 ,unsafe_allow_html=True)
-option = st.sidebar.selectbox("Select data to display", ["Single Country View", "World Wide", "All Countries Charts"])
+option = st.sidebar.selectbox("Select data to display", ["World Wide" , "Single Country View",  "All Countries Charts"])
 
 if option == "World Wide":
   # Call the /get_all_world_covid_data endpoint
@@ -99,7 +104,7 @@ if option == "World Wide" or option == "All Countries Charts":
   # Create the table data with specific information
   table_data = [{'Country': country, 'Total Cases': total_cases, 'Total Deaths': total_deaths, 'Total Recovered': total_recovered} for country, total_cases, total_deaths, total_recovered in zip(countries, total_cases, total_deaths, total_recovered)]
   
+  # Display the table
+  st.table(table_data)
   
   st.plotly_chart(fig)
-# Display the table
-  st.table(table_data)
