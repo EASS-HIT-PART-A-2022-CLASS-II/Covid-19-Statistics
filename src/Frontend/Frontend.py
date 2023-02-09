@@ -32,6 +32,14 @@ st.markdown(
             background-color: #F0F8FF;
             color: black;
       }
+      css-1ec096l.edw49t14 {
+            background-color: #F0F8FF;
+            color: black;
+      }
+      css-ltmqks.e1tzin5v0 {
+            background-color: #F0F8FF;
+            color: black; 
+      }
   </style>
   """
 ,unsafe_allow_html=True)
