@@ -25,7 +25,7 @@ def World_Data():
     return (response_data)
 
 @app.get("/get_all_countries_covid_data") #  each country covid data
-def index2():
+def All_Countries():
 
     url = "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/countries"
 

@@ -14,22 +14,15 @@ st.sidebar.title("Select Option")
 st.markdown(
   """
   <style>
-  
-      .stApp.css-fg4pbf.eczokvf1 {
-            background-color: #FAEBD7;
-            color: black;
-      }
       .block-container.css-12oz5g7.egzxvld2 {
             background-image: url('https://azrielifoundation.org/he/wp-content/uploads/2020/06/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top left;
-            opacity: 0.5;
         }
       .css-1offfwp.e16nr0p34 {
             color: black;
             background-color: #FAEBD7;
-            opacity: 1.0;
       }
       .st-be.st-bf.st-by.st-bz.st-c0.st-b3.st-c1.st-c2.st-bg.st-c3.st-c4.st-c5.st-c6 {
             background-color: #FAEBD7;
