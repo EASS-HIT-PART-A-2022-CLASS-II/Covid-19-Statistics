@@ -2,12 +2,25 @@ import streamlit as st
 import requests
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
+import os
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://sahar:sahar@covid19.ahht6gg.mongodb.net/Covid19")
+MONGO_HOST = os.getenv("mongodb")
+MONGO_PORT = os.getenv("27017")
+MONGO_DBNAME = os.getenv("Covid19")
+MONGO_USERNAME = os.getenv("sahar")
+MONGO_PASSWORD = os.getenv("sahar")
 
-db = client["Covid19_database"]
+client = pymongo.MongoClient(
+    f"mongodb://{MONGO_USERNAME}:{MONGO_PASSWORD}@{MONGO_HOST}:{MONGO_PORT}/{MONGO_DBNAME}"
+)
+
+db = client[MONGO_DBNAME]
 collection = db["Covid19_collection"]
+#client = pymongo.MongoClient("mongodb+srv://sahar:sahar@covid19.ahht6gg.mongodb.net/Covid19")
+
+#db = client["Covid19_database"]
+#collection = db["Covid19_collection"]
 
 st.sidebar.title("Select Option")
 
@@ -84,6 +97,8 @@ if option == "Single Country View":
 
   fig.update_layout(barmode='group')
   st.plotly_chart(fig)
+  
+  
   results = collection.find({"country":data['Country']})
   img = ""
   for result in results:
