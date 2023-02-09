@@ -14,8 +14,8 @@ st.sidebar.title("Options")
 st.markdown(
   """
   <style>
-      .block-container.css-12oz5g7.egzxvld2 {
-            background-image: url('https://blogs.bmj.com/covid-19/files/2020/05/Covid-Virus.png');
+      .block-container.main css-k1vhr4.egzxvld3 {
+            background-image: url('https://azrielifoundation.org/he/wp-content/uploads/2020/06/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top left;
@@ -23,28 +23,33 @@ st.markdown(
         }
       .css-1offfwp.e16nr0p34{
             color: black;
-            background-color: white;
+            background-color: #FAEBD7;
+            opacity: 1.0;
       }
       .st-be.st-bf.st-by.st-bz.st-c0.st-b3.st-c1.st-c2.st-bg.st-c3.st-c4.st-c5.st-c6 {
             background-color: #FAEBD7;
             color: black;
       }
+      css-6qob1r.e1fqkh3o3 {
+            background-color: #F0F8FF;
+            color: black;
+      }
   </style>
   """
 ,unsafe_allow_html=True)
-option = st.sidebar.selectbox("Select an option", ["Single Country View", "World Wide", "All Countries Charts"])
+option = st.sidebar.selectbox("Select data to display", ["Single Country View", "World Wide", "All Countries Charts"])
 
-if option == "Single Country View":
+if option == "World Wide":
+  # Call the /get_all_world_covid_data endpoint
+  response = requests.get("http://backend:8000/get_all_world_covid_data")
+  data = response.json()
+
+elif option == "Single Country View":
   # Call the /get_specific_country_covid_data endpoint and pass the user-specified country name as a parameter
   country = st.sidebar.text_input("Enter a country name")
   if country == "":
     country = "USA"
   response = requests.get(f"http://backend:8000/get_specific_country_covid_data/{country}")
-  data = response.json()
-
-elif option == "World Wide":
-  # Call the /get_all_world_covid_data endpoint
-  response = requests.get("http://backend:8000/get_all_world_covid_data")
   data = response.json()
 
 elif option == "All Countries Charts":
