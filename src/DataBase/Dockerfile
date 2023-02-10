@@ -1,14 +1,9 @@
-# Use the official MongoDB image as the base image
-FROM mongo:latest
+FROM python:3.10
 
-# Set the working directory to /app
-WORKDIR /app
+WORKDIR /app/DataBase
 
-# Copy the data files to the container
-COPY data/db /data/db
+COPY DataBase.py /app/DataBase
 
-# Expose port 27017
-EXPOSE 27017
+RUN pip install pymongo
 
-# Start the MongoDB service
-CMD ["mongod"]
+CMD ["python" , "DataBase.py"]

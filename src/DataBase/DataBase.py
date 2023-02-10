@@ -1,6 +1,6 @@
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://sahar:sahar@covid19.ahht6gg.mongodb.net/Covid19")
+client = pymongo.MongoClient("mongodb://mongodb:27017/Covid19")
 
 db = client["Covid19_database"]
 collection = db["Covid19_collection"]
