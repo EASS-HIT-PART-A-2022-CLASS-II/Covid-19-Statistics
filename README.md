@@ -2,8 +2,6 @@
 
 A website about statistics on Covid-19.
 
-the project contains 3 microservices - Front-end, Back-end and MongoDB image.
-
 ## features ##
 
 ✔ statistics about Covid-19 on each country
