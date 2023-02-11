@@ -26,17 +26,12 @@ git
 git clone https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Covid-19-Statistics.git
 ```
 
-2. Then nevigate to Covid-19-Statistics folder:
-```bash
-cd Covid-19-Statistics
-```
-
-3. To start, enter the following command:
+2. To start, enter the following command:
 ```bash
 docker compose up
 ```
 
-4. Great! the project is running! now open your browser and type:
+3. Great! the project is running! now open your browser and type:
 ```bash
 http://localhost:8501
 ```  
