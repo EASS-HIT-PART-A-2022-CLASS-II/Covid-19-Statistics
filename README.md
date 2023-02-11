@@ -1,9 +1,6 @@
 # Covid-19-Statistics 🤢 #
 
-this project is a website that runs over microservices that will let you view 
-world wide statistics about Covid-19 in a different way.
-
-the project contains 3 microservices - Front-end, Back-end, TBD.
+A website about statistics on Covid-19.
 
 ## features ##
 
@@ -11,13 +8,13 @@ the project contains 3 microservices - Front-end, Back-end, TBD.
 
 ✔ statistics about Covid-19 world wide
 
-✔ piecharms (TBD)
+✔ graphs
 
 ## Pre-requisites ##
 
 python 3.10
 
-docker
+docker desktop
 
 git
 
@@ -29,23 +26,15 @@ git
 git clone https://github.com/EASS-HIT-PART-A-2022-CLASS-II/Covid-19-Statistics.git
 ```
 
-2. Then nevigate to Covid-19-Statistics folder:
-```bash
-cd Covid-19-Statistics
-```
-
-3. To start, enter the following command:
+2. To start, enter the following command:
 ```bash
 docker compose up
 ```
 
-4. Great! the project is running! now open your browser and type:
+3. Great! the project is running! now open your browser and type:
 ```bash
 http://localhost:8501
 ```  
-
-![image](https://user-images.githubusercontent.com/62401198/213880026-3bd00da0-1403-4798-bdba-abdb788a4e0f.png)
-
 
 Note: now you can check the backend also 
 ```bash
