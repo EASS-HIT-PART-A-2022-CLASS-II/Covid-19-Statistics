@@ -16,7 +16,7 @@ st.markdown(
   """
   <style>
       .block-container.css-12oz5g7.egzxvld2 {
-            background-image: url('https://azrielifoundation.org/he/wp-content/uploads/2020/06/c0481846-wuhan_novel_coronavirus_illustration-spl.jpg');
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeqCLzGHDCWbv-_VeSlCpw2ISxtfcrGtGYxA&usqp=CAU');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top left;
@@ -30,7 +30,7 @@ st.markdown(
             color: black;
       }
       css-163ttbj.e1fqkh3o11 {
-            background-color: #F0F8FF;
+            background-color: #F0F8FF;x
             color: black;
       }
       css-1ec096l.edw49t14 {
